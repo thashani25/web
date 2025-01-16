@@ -1,0 +1,410 @@
+* {
+   margin: 1.5px;
+   padding:0;
+   box-sizing: border-box;
+}
+
+
+/* Main Decoration */
+body {
+   background-image: url(./Pic/bg1.jpg);
+   
+}
+h2{
+   font-size: 40px;
+   background-image: url(h1.jpg);
+   color: rgb(230, 155, 155);
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h3 {
+   font-size: 20px;
+   font-family:Bell MT;
+   text-align: center;
+}
+h5 {
+   background-color: #a1c9e6;
+   font-size:25px;
+   font-weight: bold;
+   text-align: center;
+   font-style: italic;
+}
+
+h4 {
+   font-size: 25px; 
+   font-style: normal;
+   font-weight: 200;
+   color: white;
+}
+.h6  {
+   text-align: center;
+   color: rgba(14, 9, 179, 0.886);
+}
+.topic-1 {
+   text-align: center;
+   color: red;
+   font-size: 25px;
+}
+
+.container {
+   max-width: 1200px;
+   margin: auto;
+   overflow: auto;
+   float: left;
+
+}
+
+.container-2 {
+   max-width: 1200px;
+   margin: auto;
+   overflow: auto;
+   float: right;
+}
+
+
+.gallery {
+   margin: 5px;
+   border: 1px; 
+   width: 390px;
+}
+
+.gallery img {
+   width: 100%;
+   height: auto;
+}
+.desc {
+   padding: 15px;
+   text-align: left;
+   font-size: 25px;
+   color: white;
+}
+
+.topic-2 {
+   padding: 15px;
+   text-align:left;
+   font-size: 25px;
+   color: wheat;
+}
+.center {
+   text-align: center;
+   justify-content: center;
+   display: flex;
+}
+.video   {
+   align-items: center;
+   margin-left: 600px;
+}
+.Comment  {
+   width: 600px;
+   border: 2px solid #e07e7e;
+   padding: 50px 10px;
+   margin-top: 10%;
+   align-items:center ;
+   margin-left: 30%;
+}
+.Comment h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+textarea {
+   height: 20px;
+   width: 100%;
+   border: none;
+   border-bottom: 1px solid #aaa;
+   background-color: transparent;
+   margin-bottom: 10px;
+   resize: none;
+   outline: none;
+   transition: 5s;
+}
+input[type="submit"],button
+{
+   padding: 10px 15px;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   text-transform: uppercase;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+input[type="submit"] 
+{
+   color: #fff;
+   background-color: #27bcda;
+
+}
+ button{
+   color: #27bcda;
+   background-color: transparent;
+ }
+ .center {
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+}
+
+
+a {
+   text-decoration: none;
+   line-height: 40px;
+ }
+ 
+ li {
+   list-style: none;
+ }
+    
+
+/* Navigation Bar */
+.navbar {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0.0003px;
+   background-color: #11111148;
+   color: #000000;
+   border-radius: 10px;
+ }
+ 
+ .nav-links a {
+   color: aliceblue;
+   
+ }
+ 
+ /* LOGO */
+ .logo img {
+   display: flex;
+   width: 10%;
+}
+ /* NAlay: flex;
+   gap: VBAR MENU */
+ .menu {
+   display: flex;
+   gap: 1em;
+   font-size: 20px;
+   font-weight: bold;
+   color: rgb(238, 229, 194);
+ }
+ 
+ .menu li:hover {
+   background-color: rgba(212, 174, 190, 0.527);
+   border-radius: 3px;
+   transition: 0.3s ease;
+ }
+ 
+ .menu li {
+   padding: 10px;
+ }
+ 
+ /* DROPDOWN MENU */
+ .services {
+   position: relative; 
+ }
+ 
+ .dropdown {
+   background-color: rgba(216, 194, 204, 0.404);
+   padding: 1em 0;
+   position: absolute; /*WITH RESPECT TO PARENT*/
+   display: none;
+   border-radius: 8px;
+   top: 35px;
+ }
+ 
+ .dropdown li + li {
+   margin-top: 10px;
+ }
+ 
+ .dropdown li {
+   padding: 0.5em 1em;
+   width: 8em;
+   text-align: center;
+ }
+ 
+ .dropdown li:hover {
+   background-color: rgba(216, 194, 204, 0.404);
+ }
+ 
+ .services:hover .dropdown {
+   display: block;
+ }
+
+ /* RESPONSIVE NAVBAR MENU STARTS */
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+   display: none;
+ } 
+ 
+ /* HAMBURGER MENU */
+ .hamburger {
+   display: none;
+   font-size: 24px;
+   user-select: none;
+ }
+ 
+ /* APPLYING MEDIA QUERIES */
+ @media (max-width: 768px) {
+  .menu {
+     display:none;
+     position: absolute;
+     background-color:#4c9e9e;
+     right: 0;
+     left: 0;
+     text-align: center;
+     padding: 16px 0;
+   }
+ 
+   .menu li:hover {
+     display: inline-block;
+     background-color:#4c9e9e;
+     transition: 0.3s ease;
+   }
+ 
+   .menu li + li {
+     margin-top: 12px;
+   }
+ 
+   input[type=checkbox]:checked ~ .menu {
+     display: block;
+   }
+ 
+   .hamburger {
+     display: block;
+   }
+ 
+   .dropdown {
+     left: 50%;
+     top: 30px;
+     transform: translateX(35%);
+   }
+ 
+   .dropdown li:hover {
+     background-color: #4c9e9e;
+   }
+ }
+
+hr{
+   border: 3px solid rgba(14, 13, 13, 0.438);
+   border-radius: 50px;
+   margin: 3%;
+}
+/* form {
+   width: 300px;
+   margin-left: 20px;
+}
+
+.but {
+
+   float: right;
+}
+
+
+.gif img {
+   width: 150px;
+   height: 150px;
+
+}
+
+.socail img {
+   width: 80px;
+   height: 80px;
+} */
+
+/* Footer */
+footer{
+   position: flex;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: #1111118a;
+   border-radius: 20px;
+   height: auto;
+   padding-top: 40px;
+   color: #fff;
+}
+.footer-content{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+}
+.footer-content h3{
+   font-size: 2.1rem;
+   font-weight: 500;
+   text-transform: capitalize;
+   line-height: 3rem;
+}
+.footer-content p{
+   max-width: 500px;
+   margin: 10px auto;
+   line-height: 28px;
+   font-size: 19px;
+   color: #cacdd2;
+}
+.socials{
+   list-style: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.socials img{
+   height: 50px;
+}
+.socials li{
+   margin: 0 10px
+}
+.socials a i{
+   width: 20px;
+}
+
+.footer-bottom{
+   background: #000;
+   width: 100vw;
+   padding: 20px;
+padding-bottom: 40px;
+   text-align: center;
+}
+.footer-bottom p{
+float: left;
+   font-size: 14px;
+   word-spacing: 2px;
+   text-transform: capitalize;
+}
+.footer-bottom p a{
+ color:#44bae8;
+ font-size: 16px;
+ text-decoration: none;
+}
+.footer-bottom span{
+   text-transform: uppercase;
+   opacity: .4;
+   font-weight: 200;
+}
+.footer-menu{
+ float: right;
+
+}
+.footer-menu ul{
+ display: flex;
+}
+.footer-menu ul li{
+padding-right: 10px;
+display: block;
+}
+.footer-menu ul li a{
+ color: #cfd2d6;
+ text-decoration: none;
+}
+.footer-menu ul li a:hover{
+ color: #27bcda;
+}
+
+@media (max-width:500px) {
+.footer-menu ul{
+ display: flex;
+ margin-top: 10px;
+ margin-bottom: 20px;
+}
+}
