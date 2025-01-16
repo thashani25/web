@@ -1,0 +1,271 @@
+                 <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style123.css">
+        <link rel="php" href="php.php">
+       <link href="https://fonts.googleeapis.com/css2?family=Open+Sans:wght=400;googisplay=swap" rel="stylesheet">
+        <title>Food ordering web</title>
+    </head>
+    <body>
+       <!--sidebar-->
+       <div class="sidebar">
+        <!--logo-->
+        <h1 class="logo">FoodTime</h1>
+        <!--List of menus-->
+        <div class="sidebar-menus">
+            <a href="index.html"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="bill.html"><ion-icon name="receipt-outline"></ion-icon>Bills</a>
+            <a href="wallet.html"><ion-icon name="wallet-outline"></ion-icon>Wallet</a>
+            <a href="contact.html"><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a>
+            <a href="seting.html"><ion-icon name="settings-outline"></ion-icon>Setings</a>
+        </div>
+        <!--logout-->
+        <div class="sidebar-logout">
+            <a href="a"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+       </div>
+       <!--main-->
+       <div class="main">
+        <!--main navbar-->
+        <div class="main-navbar">
+            <!--Menu when oppear on mobile vertion-->
+            <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+            <!--search bar-->
+            <div class="search">
+                <input type="text" placeholder="what you want to eat?">
+                <button class="search-btn">Search</button>
+            </div>
+            <!--profile icon on Left side of navbar-->
+            <div class="profile">
+                <a class="cart" onclick="toggleCartPopup()">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <span class="cart-count" id="cart=count">0</span></a>
+                    <script src="app2.js"></script>
+                <a class="user" href="a"><ion-icon name="person-outline"></ion-icon></a>
+            </div>
+
+        </div>
+        <!--shopping cart selection-->
+        <div id="cart-popup" class="cart-popup">
+            <h4>Shopping Cart</h4>
+            <table id="cart-items">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>#</th>
+                        <th>Price(RS.)</th>
+                        <th>Total(Rs.)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p>Total(Rs.) <span id="cart-total">0.00</span></p>
+            <a class="cart-close" onclick="closecart()"><ion-icon name="close-circle-outline"></ion-icon></a>
+        </div>
+        <!--main hightlight-->
+        <div class="main-hightlight">
+            <!--title section and arrow-->
+            <div class="main-header">
+                <h2 class="main-title">Recommendations</h2>
+                <div class="main-arrow">
+                    <ion-icon class="back" name="chevron-back-circle-outline"></ion-icon>
+                    <ion-icon class="next" name="chevron-forward-circle-outline"></ion-icon>
+                </div>
+            </div>
+            <!--hightlight menu-->
+            <div class="hightlight-wrapper">
+                <div class="hightlight-card">
+                    <img class="hightlight-img" src="images/Chicken-Kottu-500x448.jpg">
+                    <div class="hightlight-dosc">
+                        <h4>Koththu</h4>
+                        <p>Rs.350</p>
+                    </div>
+                </div>
+                    <div class="hightlight-card">
+                        <img class="hightlight-img" src="images/Chicken-Fried-Rice-square-FS-.jpg">
+                        <div class="hightlight-dosc">
+                            <h4>Rice</h4>
+                            <p>Rs.400</p>
+                        </div>
+                    </div>
+                        <div class="hightlight-card">
+                            <img class="hightlight-img" src="images/nasi-goreng-southeast-asian-fried-rice-dish_891336-1242.jpg">
+                            <div class="hightlight-dosc">
+                                <h4>Nasiguran</h4>
+                                <p>Rs.420</p>
+                            </div>
+                        </div>
+                            <div class="hightlight-card">
+                                <img class="hightlight-img" src="images/5-recettes-dhamburgers-gourmets.jpg">
+                                <div class="hightlight-dosc">
+                                    <h4>Burger</h4>
+                                    <p>Rs.150</p>
+                                </div>
+                             </div>
+                             <div class="hightlight-card">
+                                <img class="hightlight-img" src="images/shutterstock_1081222316.jpg">
+                                <div class="hightlight-dosc">
+                                    <h4>Burger</h4>
+                                    <p>Rs.150</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        <!--main menus / order-->
+        <div class="main-menus">
+             <!--filter section-->
+             <div class="main-filter">
+                <div>
+                    <h2 class="main-title"> Menus <br> category</h2>
+                    <div class="main-arrow">
+                        <ion-icon class="back-menus" name="chevron-back-circle-outline"></ion-icon>
+                        <ion-icon class="next-menus" name="chevron-forward-circle-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="filter-wrapper">
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="restaurant-outline"></ion-icon>
+                        </div>
+                        <p>All Menus</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="fast-food-outline"></ion-icon>
+                </div>
+                <p>Burger</p>
+                </div>
+                <div class="filter-card">
+                    <div class="filter-icon">
+                        <ion-icon name="pizza-outline"></ion-icon>
+                </div>
+                <p>Pizza</p>
+                </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="ice-cream-outline"></ion-icon>
+                    </div>
+                    <p>Ice-Cream</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="cafe-outline"></ion-icon>
+                    </div>
+                    <p>coffee</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="fish-outline"></ion-icon>
+                     </div>
+                     <p>Seafood</p>
+                     </div>
+                     <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="nutrition-outline"></ion-icon>
+                    </div>
+                    <p>Healthy</p>
+                    </div>
+                </div>
+             </div>
+             <hr class="divider">
+             <!--List of food Menus-->
+             <div class="main-detail">
+                <h2 class="main-title">Choose Order</h2>
+                <div class="detail-wrapper">
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/seafood-plate-with-shrimps-mussels-lobsters-served-with-lemon-glass-beer.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>See foods</h4>
+                                <p class="detail-sub">Lorem ipsum dolor sit amet consectetur provident doloremque minima</p>
+                                <p class="price">Rs.460</p>
+                                <button class="add-to-cart-btn" onclick="addTocart('See foods',Rs400)">Add to cart</button>
+                            </div>
+                            <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                    <img class="detail-img" src="images/Chicken-Kottu-500x448.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Koththu</h4>
+                                <p class="detail-sub">Lorem ipsum dolor sit amet consectetur provident doloremque minima</p>
+                                <p class="price">Rs.340</p>
+                                <button class="add-to-cart-btn" onclick="addTocart('Koththu',Rs400)">Add to cart</button>
+                            </div>
+                            <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                    <img class="detail-img" src="images/Chicken-Fried-Rice-square-FS-.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Rice</h4>
+                                <p class="detail-sub">Lorem ipsum dolor sit amet consectetur provident doloremque minima</p>
+                                <p class="price">Rs.350</p>
+                                <button class="add-to-cart-btn" onclick="addTocart('Rice',Rs400)">Add to cart</button>
+                            </div>
+                            <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+             <div class="detail-card">
+                <img class="detail-img" src="images/5-recettes-dhamburgers-gourmets.jpg">
+                    <div class="detail-desc">
+                        <div class="detail-name">
+                            <h4>Burger</h4>
+                            <p class="detail-sub">Lorem ipsum dolor sit amet consectetur provident doloremque minima</p>
+                            <p class="price">Rs.220</p>
+                            <button class="add-to-cart-btn" onclick="addTocart('Burger',Rs400)">Add to cart</button>
+                        </div>
+                        <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <img class="detail-img" src="images/nasi-goreng-southeast-asian-fried-rice-dish_891336-1242.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Nasiguran</h4>
+                                <p class="detail-sub">Lorem ipsum dolor sit amet consectetur provident doloremque minima</p>
+                                <p class="price">Rs.380</p>
+                                <button class="add-to-cart-btn" onclick="addTocart('Nasiguran',Rs400)">Add to cart</button>
+                            </div>
+                            <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="images/shutterstock_1081222316.jpg">
+                            <div class="detail-desc">
+                                <div class="detail-name">
+                                    <h4>Ice coffee</h4>
+                                    <p class="detail-sub">Lorem ipsum dolor sit amet consectetur provident doloremque minima</p>
+                                    <p class="price">Rs.120</p>
+                                    <button class="add-to-cart-btn" onclick="addTocart('Ice coffee',Rs400)">Add to cart</button>
+                                </div>
+                                <ion-icon class="detail-favourite" name="bookmark-outline"></ion-icon>
+                            </div>
+        </div>
+       </div></br></br>
+
+    
+        
+          
+       <footer>
+       
+          <ul class="share">
+              <li><a href="#"><ion-icon name="logo-facebook"></ion-icon</a></li>
+              <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+              <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+              <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+               
+          </ul>
+       </footer>
+           <script type="<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+           <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>"
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--adding javascript-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.ja"></script>
+    <script src="app.js"></script>
+</html>

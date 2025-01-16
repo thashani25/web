@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+       <link href="https://fonts.googleeapis.com/css2?family=Open+Sans:wght=400;googisplay=swap" rel="stylesheet">
+        <title>Responsive Food Delivery Services Version 2</title>
+    </head>
+    <body>
+       <!--sidebar-->
+       <div class="sidebar">
+        <!--logo-->
+        <h1 class="logo">Wallet</h1>
+        <!--List of menus-->
+        <div class="sidebar-menus">
+            <a href="index.html"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="bill.html"><ion-icon name="receipt-outline"></ion-icon>Bills</a>
+            <a href="wallet.html"><ion-icon name="wallet-outline"></ion-icon>Wallet</a>
+            <a href="Notification.html"><ion-icon name="notifications-outline"></ion-icon>Notification</a>
+            <a href="contact.html"><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a>
+            <a href="seting.html"><ion-icon name="settings-outline"></ion-icon>Setings</a>
+        </div>
+        <!--logout-->
+        <div class="sidebar-logout">
+            <a href="a"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+       </div>
+       <!--main-->
+       <div class="main">
+        <!--main navbar-->
+        <div class="main-navbar">
+            <!--Menu when oppear on mobile vertion-->
+            <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+            <!--search bar-->
+            <div class="search">
+                <input type="text" placeholder="what you want to eat?">
+                <button class="search-btn">Search</button>
+            </div>
+            <!--profile icon on Left side of navbar-->
+            <div class="profile">
+                <a class="cart" href="a" onclick="toggleCartpopup()">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <span class="cart-count" id="cart=count">0</span></a>
+                <a class="user" href="a"><ion-icon name="person-outline"></ion-icon></a>
+            </div>
+
+        </div>
+        
+        <!--main hightlight-->
+        <div class="main-hightlight">
+            <!--title section and arrow-->
+            <div class="main-header">
+                <h2 class="main-title">Recommendations</h2>
+                <div class="main-arrow">
+                    <ion-icon class="back" name="chevron-back-circle-outline"></ion-icon>
+                    <ion-icon class="next" name="chevron-forward-circle-outline"></ion-icon>
+                </div>
+            </div>
+            <!--hightlight menu-->
+            <div class="hightlight-wrapper">
+                <div class="hightlight-card">
+                    <img class="hightlight-img" src="images/Chicken-Kottu-500x448.jpg">
+                    <div class="hightlight-dosc">
+                        <h4>Koththu</h4>
+                        <p>Rs.350</p>
+                    </div>
+                </div>
+                    <div class="hightlight-card">
+                        <img class="hightlight-img" src="images/Chicken-Fried-Rice-square-FS-.jpg">
+                        <div class="hightlight-dosc">
+                            <h4>Rice</h4>
+                            <p>Rs.400</p>
+                        </div>
+                    </div>
+                        <div class="hightlight-card">
+                            <img class="hightlight-img" src="images/nasi-goreng-southeast-asian-fried-rice-dish_891336-1242.jpg">
+                            <div class="hightlight-dosc">
+                                <h4>Nasiguran</h4>
+                                <p>Rs.420</p>
+                            </div>
+                        </div>
+                            <div class="hightlight-card">
+                                <img class="hightlight-img" src="images/5-recettes-dhamburgers-gourmets.jpg">
+                                <div class="hightlight-dosc">
+                                    <h4>Burger</h4>
+                                    <p>Rs.150</p>
+                                </div>
+                             </div>
+                             <div class="hightlight-card">
+                                <img class="hightlight-img" src="images/shutterstock_1081222316.jpg">
+                                <div class="hightlight-dosc">
+                                    <h4>Burger</h4>
+                                    <p>Rs.150</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        <!--main menus / order-->
+        <div class="main-menus">
+             <!--filter section-->
+             <div class="main-filter">
+                <div>
+                    <h2 class="main-title"> Menus <br> category</h2>
+                    <div class="main-arrow">
+                        <ion-icon class="back-menus" name="chevron-back-circle-outline"></ion-icon>
+                        <ion-icon class="next-menus" name="chevron-forward-circle-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="filter-wrapper">
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="restaurant-outline"></ion-icon>
+                        </div>
+                        <p>All Menus</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="fast-food-outline"></ion-icon>
+                </div>
+                <p>Burger</p>
+                </div>
+                <div class="filter-card">
+                    <div class="filter-icon">
+                        <ion-icon name="pizza-outline"></ion-icon>
+                </div>
+                <p>Pizza</p>
+                </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="ice-cream-outline"></ion-icon>
+                    </div>
+                    <p>Ice-Cream</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="cafe-outline"></ion-icon>
+                    </div>
+                    <p>coffee</p>
+                    </div>
+                    <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="fish-outline"></ion-icon>
+                     </div>
+                     <p>Seafood</p>
+                     </div>
+                     <div class="filter-card">
+                        <div class="filter-icon">
+                            <ion-icon name="nutrition-outline"></ion-icon>
+                    </div>
+                    <p>Healthy</p>
+                    </div>
+                </div>
+             </div>
+             <hr class="divider">
+             <main>
+                <!-- Contact form -->
+                <section class="contact-form">
+                    <h2>Get in Touch</h2>
+                    <form action="#" method="POST">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required></br></br>
+        
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required></br></br>
+        
+                        <label for="message">Your Message:</label><br>
+                        <textarea id="message" name="message" required></textarea></br></br>
+        
+                        <button type="submit">Send Message</button>
+                    </form>
+                </section>
+        
+                <!-- Contact information -->
+                <section class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>If you have any questions or concerns, feel free to contact us using the information below:</p>
+                    <ul>
+                        <li>Email: food123@gmail.com</li>
+                        <li>Phone: 076-7365628</li>
+                        <li>Address: No:02, Mawanella road,Kegalle</li>
+                    </ul>
+                </section>
+            </main>
+        </br></br>
+            <footer class="footer">
+                <dive class="row">
+                
+            <p>&copy; 2024 FoodTime. All rights reserved.</p>
+           
+            </dive>
+            </div>
+        </footer>
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--adding javascript-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.ja"></script>
+    <script src="app.js"></script>
+    
+</html>
